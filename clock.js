@@ -6,6 +6,21 @@ function timer() {
     document.getElementById("go").innerHTML = timing;
 }
 
+// function clock() {
+// 	var d = new Date()
+// 	var hours = d.getHours()
+// 	var min = d.getMinutes()
+// 	var sec = d.getSeconds()
+// 	var milli = d.getMilliseconds()
+// 	if(milli == 0) {
+// 		"000"
+// 	} 
+// 	if(hours )
+// 	if(min )
+// 	if(sec )
+	
+// }
+
 // var CColor = setInterval(function(){ setCColor() }, 60000) //1000ms*60s*1min
 
 // function setCColor() {
