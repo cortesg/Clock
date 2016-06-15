@@ -1,24 +1,43 @@
-var clock = setInterval(function() { timer() }, 1000);
+// var clock = setInterval(function() { timer() }, 1000);
 
-function timer() {
-    var d = new Date();
-    var timing = d.toLocaleTimeString();
-    document.getElementById("go").innerHTML = timing;
+// function timer() {
+//     var d = new Date();
+//     var timing = d.toLocaleTimeString();
+//     document.getElementById("go").innerHTML = timing;
+// }
+
+function clock() {
+	var d = new Date()
+	var hours = d.getHours()
+	var min = d.getMinutes()
+	var sec = d.getSeconds()
+	var milli = d.getMilliseconds()
+	var merdiem = "AM"
+	if(milli == 0) {
+		milli = "000"
+	} else if (milli < 10) {
+		milli = "00" + milli
+	} else if (milli < 100) {
+		milli = "0" + milli
+	}
+	if(hours > 12) {
+		hours = hours - 12
+		merdiem = "PM"
+	}
+	if(min < 10) {
+		min = "0" + min
+	}
+	if(sec < 10) {
+		sec = "0" + sec
+	}
+	clock.innerText = hours + ":" + min + ":" + sec + ":" + milli + ":" + merdiem
 }
+setInterval(clock, 1)
 
-// function clock() {
-// 	var d = new Date()
-// 	var hours = d.getHours()
-// 	var min = d.getMinutes()
-// 	var sec = d.getSeconds()
-// 	var milli = d.getMilliseconds()
-// 	if(milli == 0) {
-// 		"000"
-// 	} 
-// 	if(hours )
-// 	if(min )
-// 	if(sec )
-	
+//innerhtml window.onload = function() {
+//	FUNCTION();
+//};
+
 // }
 
 // var CColor = setInterval(function(){ setCColor() }, 60000) //1000ms*60s*1min
