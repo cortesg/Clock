@@ -1,11 +1,4 @@
-// var clock = setInterval(function() { timer() }, 1000);
-
-// function timer() {
-//     var d = new Date();
-//     var timing = d.toLocaleTimeString();
-//     document.getElementById("go").innerHTML = timing;
-// }
-
+// $(document).ready(function() {
 function clock() {
 	var d = new Date()
 	var hours = d.getHours()
@@ -13,6 +6,7 @@ function clock() {
 	var sec = d.getSeconds()
 	var milli = d.getMilliseconds()
 	var merdiem = "AM"
+	var clock = document.getElementById("clock")
 	if(milli == 0) {
 		milli = "000"
 	} else if (milli < 10) {
@@ -30,9 +24,14 @@ function clock() {
 	if(sec < 10) {
 		sec = "0" + sec
 	}
-	clock.innerText = hours + ":" + min + ":" + sec + ":" + milli + ":" + merdiem
+	clock.innerText = hours + ":" + min + ":" + sec + ":" + milli + " " + merdiem
+	
+
+
 }
 setInterval(clock, 1)
+
+clock()
 
 //innerhtml window.onload = function() {
 //	FUNCTION();
@@ -51,26 +50,44 @@ setInterval(clock, 1)
 // 	}
 // }
 
-// var Bcolor = setInterval(function(){ setBColor() }, 300000); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
+var BColor = setInterval(function(){ setBColor() }, 500); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
  
-// function setBColor() {
-// 	var a = document.body;
-// 	a.style.backgroundColor = a.style.backgroundColor == "yellow" ? "pink" : "yellow";
-// }
+function setBColor() {
+	var html = document.body;
+	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray")
+	html.style.background=randomcolors[Math.floor(Math.random()*randomcolors.length)]  //Math.random generates a number between 0 and 1, that isn't a whole number, and also isn't 1. To get a number, for example between 0 and 10, multiply your answer by 10:
+													// Math.random() * 10
+												// To get it to be a whole number, i.e. an integer, apply Math.floor, which rounds down to the nearest whole number:
+}
  
-// function stopBColor() {
-//   clearInterval(Bcolor);
+
+function stopBColor() {
+  clearInterval(BColor);
+}  // Future project: drop down menu which allows you to select color
+
+var TColor = setInterval(function(){ setTColor() }, 600) //1000ms*60s*60min*1hr
+
+function setTColor() {
+	var clocktext = document.getElementById("clock");
+	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray")
+	clocktext.style.color=randomcolors[Math.floor(Math.random()*randomcolors.length)]  
+}
+
+
+
+
+
+
+
+
+
+// var clock = setInterval(function() { timer() }, 1000);
+
+// function timer() {
+//     var d = new Date();
+//     var timing = d.toLocaleTimeString();
+//     document.getElementById("go").innerHTML = timing;
 // }
 
-// var TColor = setInterval(function(){ setTColor() }, 3600000) //1000ms*60s*60min*1hr
-
-// function setTColor() {
-// 	var z = document.body    //1 thru 12 needs a color 
-// 	if(___ == 1) {        
-//   		z.style.h2 = z.style.h2 == "pink"
-// 	} else if(___ == 2) {
-// 		z.style.h2 = z.style.h2 == "green"
-// 	} else if...                          //loop?
-// }
 
 // difference between 1 and 3???? text???
