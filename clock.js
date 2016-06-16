@@ -26,59 +26,49 @@ function clock() {
 	}
 	clock.innerText = hours + ":" + min + ":" + sec + ":" + milli + " " + merdiem
 
-function setTColor() {
-	var clocktext = document.getElementById("clock");
-	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive", "gold", "teal")
-	if(hours == 12) {
-		clocktext.style.color=randomcolors[0] 
-	} else if(hours == 1) {
-		clocktext.style.color=randomcolors[1]
-	} else if(hours == 2) {
-		clocktext.style.color=randomcolors[2]
-	} else if(hours == 3) {
-		clocktext.style.color=randomcolors[3]
-	} else if(hours == 4) {
-		clocktext.style.color=randomcolors[4]
-	} else if(hours == 5) {
-		clocktext.style.color=randomcolors[5]
-	} else if(hours == 6) {
-		clocktext.style.color=randomcolors[6]
-	} else if(hours == 7) {
-		clocktext.style.color=randomcolors[7]
-	} else if(hours == 8) {
-		clocktext.style.color=randomcolors[8]
-	} else if(hours == 9) {
-		clocktext.style.color=randomcolors[9]
-	} else if(hours == 10) {
-		clocktext.style.color=randomcolors[10]
-	} else if(hours == 11) {
-		clocktext.style.color=randomcolors[11]
-}   //loop?? and??
-}
-setTColor()
-
-
+	function setTColor() {
+		var clocktext = document.getElementById("clock");
+		var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive", "gold", "teal")
+		if(hours == 12) {
+			clocktext.style.color=randomcolors[0] 
+		} else if(hours == 1) {
+			clocktext.style.color=randomcolors[1]
+		} else if(hours == 2) {
+			clocktext.style.color=randomcolors[2]
+		} else if(hours == 3) {
+			clocktext.style.color=randomcolors[3]
+		} else if(hours == 4) {
+			clocktext.style.color=randomcolors[4]
+		} else if(hours == 5) {
+			clocktext.style.color=randomcolors[5]
+		} else if(hours == 6) {
+			clocktext.style.color=randomcolors[6]
+		} else if(hours == 7) {
+			clocktext.style.color=randomcolors[7]
+		} else if(hours == 8) {
+			clocktext.style.color=randomcolors[8]
+		} else if(hours == 9) {
+			clocktext.style.color=randomcolors[9]
+		} else if(hours == 10) {
+			clocktext.style.color=randomcolors[10]
+		} else if(hours == 11) {
+			clocktext.style.color=randomcolors[11]
+		}   //loop?? 
+	}
+	function setH2Color() {
+		var h2text = document.getElementById("block");
+		var randomcolors=new Array("black", "purple")
+		if(sec % 2 == 1) {
+			h2text.style.color=randomcolors[0] 
+		} else if(sec % 2 == 0) {
+			h2text.style.color=randomcolors[1]
+		}
+	}
+	setTColor()
+	setH2Color()
 }
 setInterval(clock, 1)
-
 clock()
-
-//innerhtml window.onload = function() {
-//	FUNCTION();
-//};
-
-// }
-
-// var CColor = setInterval(function(){ setCColor() }, 60000) //1000ms*60s*1min
-
-// function setCColor() {
-// 	var m = document.body
-// 	if(___ % 2 == 1) {         //the minute is odd,  
-//   		m.style.h1 = m.style.h1 == "black"
-// 	} else {
-// 		m.style.h1 = m.style.h1 == "green"
-// 	}
-// }
 
 var BColor = setInterval(function(){ setBColor() }, 300000); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
  
@@ -89,15 +79,15 @@ function setBColor() {
 													// Math.random() * 10
 												// To get it to be a whole number, i.e. an integer, apply Math.floor, which rounds down to the nearest whole number:
 }
-   //if else and?
+   //if else and method?
+
+function stopTime() {
+  clearInterval(clock);
+} //Doesnt work
 
 function stopBColor() {
   clearInterval(BColor);
 }  // Future project: drop down menu which allows you to select color
-
-// var TColor = setInterval(function(){ setTColor() }, 600) //1000ms*60s*60min*1hr
-
-
 
 
 
