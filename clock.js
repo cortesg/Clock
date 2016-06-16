@@ -58,9 +58,9 @@ function clock() {
 	function setH2Color() {
 		var h2text = document.getElementById("block");
 		var randomcolors=new Array("black", "purple")
-		if(sec % 2 == 1) {
+		if(min % 2 == 1) {
 			h2text.style.color=randomcolors[0] 
-		} else if(sec % 2 == 0) {
+		} else if(min % 2 == 0) {
 			h2text.style.color=randomcolors[1]
 		}
 	}
