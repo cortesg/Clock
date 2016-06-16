@@ -25,7 +25,34 @@ function clock() {
 		sec = "0" + sec
 	}
 	clock.innerText = hours + ":" + min + ":" + sec + ":" + milli + " " + merdiem
-	
+
+function setTColor() {
+	var clocktext = document.getElementById("clock");
+	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive")
+	if(sec == 0) {
+		clocktext.style.color=randomcolors[0] 
+	} else if(sec == 1) {
+		clocktext.style.color=randomcolors[1]
+	} else if(sec == 2) {
+		clocktext.style.color=randomcolors[2]
+	} else if(sec == 3) {
+		clocktext.style.color=randomcolors[3]
+	} else if(sec == 4) {
+		clocktext.style.color=randomcolors[4]
+	} else if(sec == 5) {
+		clocktext.style.color=randomcolors[5]
+	} else if(sec == 6) {
+		clocktext.style.color=randomcolors[6]
+	} else if(sec == 7) {
+		clocktext.style.color=randomcolors[7]
+	} else if(sec == 8) {
+		clocktext.style.color=randomcolors[8]
+	} else if(sec == 9) {
+		clocktext.style.color=randomcolors[9]
+	} 
+}
+
+setTColor()
 
 
 }
@@ -50,7 +77,7 @@ clock()
 // 	}
 // }
 
-var BColor = setInterval(function(){ setBColor() }, 500); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
+var BColor = setInterval(function(){ setBColor() }, 300000); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
  
 function setBColor() {
 	var html = document.body;
@@ -65,13 +92,8 @@ function stopBColor() {
   clearInterval(BColor);
 }  // Future project: drop down menu which allows you to select color
 
-var TColor = setInterval(function(){ setTColor() }, 600) //1000ms*60s*60min*1hr
+// var TColor = setInterval(function(){ setTColor() }, 600) //1000ms*60s*60min*1hr
 
-function setTColor() {
-	var clocktext = document.getElementById("clock");
-	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray")
-	clocktext.style.color=randomcolors[Math.floor(Math.random()*randomcolors.length)]  
-}
 
 
 
