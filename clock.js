@@ -53,7 +53,7 @@ function clock() {
 			clocktext.style.color=randomcolors[10]
 		} else if(hours == 11) {
 			clocktext.style.color=randomcolors[11]
-		}   //loop?? 
+		}   //is there a loop method to complete this task? 
 	}
 	function setH2Color() {
 		var h2text = document.getElementById("block");
@@ -79,7 +79,7 @@ function setBColor() {
 													// Math.random() * 10
 												// To get it to be a whole number, i.e. an integer, apply Math.floor, which rounds down to the nearest whole number:
 }
-   //if else and method?
+   //is there a if/else way to complete this task?
 
 function stopTime() {
   clearInterval(clock);
@@ -95,7 +95,7 @@ function stopBColor() {
 
 
 
-
+// -------- ALTERNATIVE WAY BELOW for making clock ----------
 // var clock = setInterval(function() { timer() }, 1000);
 
 // function timer() {
@@ -105,4 +105,4 @@ function stopBColor() {
 // }
 
 
-// difference between 1 and 3???? text???
+
