@@ -28,30 +28,33 @@ function clock() {
 
 function setTColor() {
 	var clocktext = document.getElementById("clock");
-	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive")
-	if(sec == 0) {
+	var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive", "gold", "teal")
+	if(hours == 12) {
 		clocktext.style.color=randomcolors[0] 
-	} else if(sec == 1) {
+	} else if(hours == 1) {
 		clocktext.style.color=randomcolors[1]
-	} else if(sec == 2) {
+	} else if(hours == 2) {
 		clocktext.style.color=randomcolors[2]
-	} else if(sec == 3) {
+	} else if(hours == 3) {
 		clocktext.style.color=randomcolors[3]
-	} else if(sec == 4) {
+	} else if(hours == 4) {
 		clocktext.style.color=randomcolors[4]
-	} else if(sec == 5) {
+	} else if(hours == 5) {
 		clocktext.style.color=randomcolors[5]
-	} else if(sec == 6) {
+	} else if(hours == 6) {
 		clocktext.style.color=randomcolors[6]
-	} else if(sec == 7) {
+	} else if(hours == 7) {
 		clocktext.style.color=randomcolors[7]
-	} else if(sec == 8) {
+	} else if(hours == 8) {
 		clocktext.style.color=randomcolors[8]
-	} else if(sec == 9) {
+	} else if(hours == 9) {
 		clocktext.style.color=randomcolors[9]
-	} 
+	} else if(hours == 10) {
+		clocktext.style.color=randomcolors[10]
+	} else if(hours == 11) {
+		clocktext.style.color=randomcolors[11]
+}   //loop?? and??
 }
-
 setTColor()
 
 
@@ -86,7 +89,7 @@ function setBColor() {
 													// Math.random() * 10
 												// To get it to be a whole number, i.e. an integer, apply Math.floor, which rounds down to the nearest whole number:
 }
- 
+   //if else and?
 
 function stopBColor() {
   clearInterval(BColor);
