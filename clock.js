@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 function clock() {
 	var d = new Date()
 	var hours = d.getHours()
@@ -28,7 +27,7 @@ function clock() {
 
 	function setTColor() {
 		var clocktext = document.getElementById("clock");
-		var randomcolors=new Array("red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive", "gold", "teal")
+		var randomcolors=["red", "orange", "yellow", "green", "blue", "purple", "brown", "pink", "gray", "olive", "gold", "teal"]
 		if(hours == 12) {
 			clocktext.style.color=randomcolors[0] 
 		} else if(hours == 1) {
@@ -53,7 +52,7 @@ function clock() {
 			clocktext.style.color=randomcolors[10]
 		} else if(hours == 11) {
 			clocktext.style.color=randomcolors[11]
-		}   //is there a loop method to complete this task? 
+		}   
 	}
 	function setH2Color() {
 		var h2text = document.getElementById("block");
@@ -70,7 +69,7 @@ function clock() {
 setInterval(clock, 1)
 clock()
 
-var BColor = setInterval(function(){ setBColor() }, 300000); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
+var BColor = setInterval(function(){ setBColor() }, 250); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
  
 function setBColor() {
 	var html = document.body;
@@ -79,30 +78,7 @@ function setBColor() {
 													// Math.random() * 10
 												// To get it to be a whole number, i.e. an integer, apply Math.floor, which rounds down to the nearest whole number:
 }
-   //is there a if/else way to complete this task?
-
-function stopTime() {
-  clearInterval(clock);
-} //Doesnt work
 
 function stopBColor() {
   clearInterval(BColor);
 }  // Future project: drop down menu which allows you to select color
-
-
-
-
-
-
-
-// -------- ALTERNATIVE WAY BELOW for making clock ----------
-// var clock = setInterval(function() { timer() }, 1000);
-
-// function timer() {
-//     var d = new Date();
-//     var timing = d.toLocaleTimeString();
-//     document.getElementById("go").innerHTML = timing;
-// }
-
-
-
