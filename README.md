@@ -1,19 +1,17 @@
 # Clock
 WDI - NYCDA Jun 2016 Week 2
 
-Using the clock that we just created...
+##Using the clock that we just created...##
 
-Change the color to black if it is an odd minute and another color if it is even minute.
+*Change the color to black if it is an odd minute and another color if it is even minute.
 
-Change the background to a random color every 5 minutes.
+*Change the background to a random color every 5 minutes.
 
-Change the text color to a different color of the clock every hour, selected from an array of colors.
+*Change the text color to a different color of the clock every hour, selected from an array of colors.
 
- (Links to an external site.)Grading Criteria
-The clock itself can be created in JavaScript or jQuery.
+##Grading Criteria##
+*The clock itself can be created in JavaScript or jQuery.
 
-The syntax is correct and the code is indented properly.
+*The syntax is correct and the code is indented properly.
 
-All color-changing functions should properly use if-else logic utilizing the modulus operator.
-
-Previous Next
+*All color-changing functions should properly use if-else logic utilizing the modulus operator.
