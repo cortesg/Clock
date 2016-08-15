@@ -17,6 +17,9 @@ function clock() {
 		hours = hours - 12
 		merdiem = "PM"
 	}
+	if(hours = 12) {
+		merdiem = "PM"
+	}
 	if(min < 10) {
 		min = "0" + min
 	}
