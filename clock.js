@@ -13,6 +13,9 @@ function clock() {
 	} else if (milli < 100) {
 		milli = "0" + milli
 	}
+	if(hours = 12) {
+		merdiem = "PM"
+	}
 	if(hours > 12) {
 		hours = hours - 12
 		merdiem = "PM"
@@ -69,7 +72,7 @@ function clock() {
 setInterval(clock, 1)
 clock()
 
-var BColor = setInterval(function(){ setBColor() }, 250); //300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
+var BColor = setInterval(function(){ setBColor() }, 1000); //should be 300,000 milliseconds or 5 min = 1000 mill * 60 seconds * 5 min 
  
 function setBColor() {
 	var html = document.body;
